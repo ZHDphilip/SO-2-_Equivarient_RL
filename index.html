@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Your Project Name</title>
-<meta property="og:title" content=Your Project Name" />
-<meta name="twitter:title" content="Your Project Name" />
+<title>SO(2) Equivariant Reinforcement Learning</title>
+<meta property="og:title" content=SO(2) Equivariant Reinforcement Learning" />
+<meta name="twitter:title" content="SO(2) Equivariant Reinforcement Learning" />
 <meta name="description" content="Your project about your cool topic described right here." />
 <meta property="og:description" content="Your project about your cool topic described right here." />
 <meta name="twitter:description" content="Your project about your cool topic described right here." />
@@ -17,13 +17,58 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 
+<style>
+  table {
+      border-collapse: collapse;
+      width: 100%;
+  }
+
+  th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+  }
+
+  th {
+      background-color: #f2f2f2;
+  }
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+.lc{
+  float: left;
+  width: 16.66%;
+}
+.caption {
+    margin: 0;
+    vertical-align: baseline;
+    text-align: center;
+}
+img.rounded {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 120px; /* You can adjust this value depending on your layout needs */
+  height: auto;
+  aspect-ratio: 1/1;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.people_column {
+  float: left;
+  width: 150px;
+}
+</style>
+
 </head>
 <body class="nd-docs">
 <div class="nd-pageheader">
  <div class="container">
  <h1 class="lead">
- <nobr class="widenobr">Your Project Name</nobr>
- <nobr class="widenobr">For CS 7150</nobr>
+ <nobr class="widenobr">SO(2) Equivariant Reinforcement Learning</nobr>
+ <!-- <nobr class="widenobr">For CS 7150</nobr> -->
  </h1>
  </div>
 </div><!-- end nd-pageheader -->
@@ -31,32 +76,242 @@
 <div class="container">
 <div class="row">
 <div class="col justify-content-center text-center">
-<h2>An Analysis of [papername]</h2>
-<p>Describe the paper and the big question about it that interests you.</p>
+<h2>An Analysis of SO(2) Equivariant Reinforcement Learning</h2>
+<p align="justify">
+  Equivariant neural networks enforce symmetry within the structure of their convolutional layers, 
+  resulting in a substantial improvement in sample efficiency when learning an equivariant or invariant function. 
+  Such models are applicable to robotic manipulation learning which can often be formulated as a rotationally symmetric problem. 
+  This ICLR 22 Spotlight paper studies equivariant model architectures in the context of Q-learning and actor-critic reinforcement learning. 
+  We identify equivariant and invariant characteristics of the optimal Q-function and the optimal policy and propose equivariant DQN and SAC algorithms that leverage this structure. 
+  We present experiments that demonstrate that our equivariant versions of DQN and SAC can be significantly more sample efficient than competing algorithms on an important class of robotic manipulation problems.
+</p>
 </div>
 </div>
 <div class="row">
 <div class="col">
 
-<h2>Literature Review; Biography; Social Impact; Industry Applications; Follow-on Research; and Peer-Review</h2>
+<div style="text-align:center">
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/8Ocwv2nnSKI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</div>
 
-<p>Just as we have done in the role-playing exercise, analyze the paper from all perspectives.
+<p style="text-align:center;margin-top:5ex">
+  <img src="https://pointw.github.io/equi_rl_page/img/dian_iclr22_poster.png" width="1000px">
 </p>
 
-<p>Optionally, in addition to a reading-based analysis, implement the ideas of the paper in code, and report on your findings.
+<h3>Biography</h3>
+
+
+<table>
+  <tr>
+      <th>Name</th>
+      <th> Photo </th>
+      <th>Affiliation</th>
+      <th>Research Interests</th>
+      <th>Background</th>
+  </tr>
+  
+<tr>
+  <td><a href="https://www.khoury.northeastern.edu/people/robin-walters/">Dian Wang</a></td>
+  <td><img src ="https://pointw.github.io/equi_rl_page/img/dian.jpeg" height="100px" width="100px"></td>
+  <td>PhD Candidate at Northeastern University</td>
+  <td>Machine Learning and Robotics, Equivariant ML on Robot Manipulation</td>
+  <td>MS.CS @ Northeastern University, BS.CS @ Sichuan University, Chengdu, China</td>
+</tr>
+<tr>
+  <td><a href="http://www.robinwalters.com/">Robin Walters</a></td>
+  <td><img src ="https://pointw.github.io/equi_rl_page/img/robin.jpeg" height="100px" width="100px"></td>
+  <td>Assistant Professor at Northeastern University</td>
+  <td>Theory of DL through symmetry</td>
+  <td>Ph.D. Math @ University of Chicago, BA. Math @ Harvard University</td>
+</tr>
+<tr>
+  <td><a href="https://www.khoury.northeastern.edu/people/robert-platt/">Robert Platt</a></td>
+  <td><img src ="https://pointw.github.io/equi_rl_page/img/rob.jpeg" height="100px" width="100px"></td>
+  <td>Boston Dynamics Artificial Intelligence; Associate Professor at Northeastern University</td>
+  <td>Robotics, Manipulation, Policy Leraning.</td>
+  <td>Ph.D. CS @ University of Massachusetts Amherst, BS. EE @ Duke University </td>
+</tr>
+</table>
+
+
+<h3>Method and Diagram</h3>
+<p align="center">
+  <img src="https://pointw.github.io/equi_rl_page/img/equi.gif" width="400px" />
+</p>
+<p>This work studies the SO(2) equivariant property of robotic manipulation in the context of reinforcement learning. We use equivariant networks to enforce the equivariance in the structure of the networks to improve the sample efficiency.</p>
+
+<p align="center">
+  <img src="https://pointw.github.io/equi_rl_page/img/dqn.png" width="250px" />
+</p>
+
+<p>In Equivariant DQN, if the input state of the Q-network is rotated, the output of the Q-network (where the value of each cell in the 3x3 grid represents the Q-value of moving towards a specific direction) will be rotated by the same amount.</p>
+
+<p align="center">
+  <img src="https://pointw.github.io/equi_rl_page/img/actor_critic.png" width="600px" />
+</p>
+
+<p>In Equivariant SAC, if the input state of the actor (left) is rotated, the output action of the actor will be rotated by the same amount. If the input state and action of the critic (right) are rotated, the output Q-value of the critic will remain the same.</p>
+
+<div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/pick.gif" style="width:100%" />
+    <p class="caption">Object Picking</p>
+  </div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/pull.gif" style="width:100%" />
+    <p class="caption">Block Pulling</p>
+  </div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/drawer.gif" style="width:100%" />
+    <p class="caption">Drawer Opening</p>
+  </div>
+</div>
+
+<div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/stack.gif" style="width:100%" />
+    <p class="caption">Block Stacking</p>
+  </div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/h1.gif" style="width:100%" />
+    <p class="caption">House Building</p>
+  </div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/corner.gif" style="width:100%" />
+    <p class="caption">Corner Picking</p>
+  </div>
+</div>
+
+<p>Our Equivariant SAC can solve different manipulation tasks with high sample effeciency.</p>
+
+<div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/sac_hp.png" style="width:100%" />
+    <p class="caption">Object Picking</p>
+  </div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/sac_bpull.png" style="width:100%" />
+    <p class="caption">Block Pulling</p>
+  </div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/sac_do.png" style="width:100%" />
+    <p class="caption">Drawer Opening</p>
+  </div>
+</div>
+
+<div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/sacfd_bs.png" style="width:100%" />
+    <p class="caption">Block Stacking</p>
+  </div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/sacfd_h1.png" style="width:100%" />
+    <p class="caption">House Building</p>
+  </div>
+  <div class="column">
+    <img src="https://pointw.github.io/equi_rl_page/img/sacfd_bpc.png" style="width:100%" />
+    <p class="caption">Corner Picking</p>
+  </div>
+</div>
+
+<p>Our Equivariant method (blue) dramatically outperforms competing baselines, including some sample-efficient baselines using data augmentation.</p>
+<h3>Social Impact</h3>
+
+<p>
+  With the help of this more efficient variant of RL, more and more industries can be potentially transformed. When robot manipulators and legged robots
+  become more accessible and efficient, they have the potential to replace large volume of workers in factories. This could lead to increasing unemployment
+  rate and longlasting disturbances in the society, as evidenced by the introduction of robots to for example vehicle assembly lines. But in the long run, 
+  possibly with the bias of an AI researcher, this is a beneficial change: more and more education and resources will be skewed toward the scientific
+  frontier -- as human beings are no longer required to learn repetitive tasks -- and help us explore regions, tasks, and fields that seems infeasible
+  to us today. I have seen lots of brilliant minds tightening screws in assembly lines in China, and their intellectual ability should not be restrained and
+  wasted in tasks where human are less efficient and far less accurate than robots.
+</p>
+
+<h3>Industry Application and Impact</h3>
+
+<p>
+  Reinforcement Learning algorithms have suffered from the need of large volume of interaction with the simulated/real world environment. 
+  Although there exist various research on generalizing existing models to new tasks, the generalizing performance of RL models are still
+  far from mass deployment to real world robots. Among the first papers to bridge together Reinforcement Learning and Equivariant neural 
+  networks, this work significantly improved the sample efficiency of Reinforment Learning algorithms on robot manipulation tasks. This is
+  a big step toward deployable and scalable robot manipulators for use in various scenarios. For example, assembly line factories, health 
+  care, millitary, and so on. A general purpose Reinforcement Learning algorithm for manipulation task can be imagined if the generalizability
+  of such algorithms can be improved -- robot manipulation world can see some hope for their own Chatgpt.
+</p>
+
+<h3>Follow-on Research</h3>
+<p align="justify">
+  This paper is one of the first to embed the equivariance property in the reinforcement learning and robot manipulation tasks. 
+  Inspired by this paper, lots of good papers have been published. For instances,
+    </br></br>  
+  [2]</a> <a href="https://arxiv.org/pdf/2202.09468.pdf">
+    <em>Sample Efficient Grasp Learning Using Equivariant Models.</em></a>
+    Xupeng Zhu, Dian Wang, Ondrej Biza, Guanang Su, Robin Walters, Robert Platt
+      Robotics: Science and Systems (RSS).
+    </br></br>    
+  [3]</a> <a href="https://arxiv.org/pdf/2202.09400.pdf">
+    <em>Equivariant Transporter Network.</em></a>
+    Haojie Huang, Dian Wang, Robin Walters, Robert Platt
+      Robotics: Science and Systems (RSS).
+    </br></br>
+  [4]</a> <a href="https://arxiv.org/pdf/2302.13926.pdf">
+  <em>Image to Sphere: Learning Equivariant Features for Efficient Pose Prediction</em></a>
+  David M. Klee, Ondrej Biza, Robert Platt, Robin Walter
+  International Conference on Learning Representations (ICLR)
+</br></br>
+  Recently, some following works have applied this idea to the more complex SE(3) space, achieving good performance and sample efficiency in that field.
+  Also, by combining the equivariance algorithm with the large pre-trained model, like chat-gpt, segment anything, etc., some researchers are studying 
+  the sample efficiency, performance, and generalization of the model to see whether it can be further improved.
+
+</p>
+
+<h3>Review</h3>
+<p align="justify">
+  The research investigates the application of equivariant neural network architectures in model-free reinforcement learning for visuomotor 
+  robot manipulation tasks. The goal is to enhance sample efficiency by leveraging rotational symmetries. The paper begins by formally
+  defining and theoretically evaluating a category of Markov Decision Processes (MDPs) termed "group-invariant MDPs," where rewards and 
+  transitions are invariant to group elements. It then introduces equivariant versions of popular reinforcement learning algorithms, 
+  namely DQN, SAC, and learning from demonstration (LfD).
+  </br></br>
+  Experimental results across various manipulation tasks demonstrate that the 
+  proposed architectures outperform current benchmarks in terms of sample efficiency and generalization. Ablation studies further
+  highlight the contribution of individual model components. The concept of structuring neural architecture to exploit domain symmetry 
+  for improved sample efficiency is both compelling and well-founded. The paper's contributions are twofold: firstly, it introduces an 
+  effective variation of equivariant DQN tailored for challenging and realistic visuomotor control domains. Secondly, it puts forth novel
+  equivariant versions of SAC and LfD, substantiating their efficacy through comprehensive experiments. Therefore, I concur with the 
+  paper's significance and overall value.
 </p>
 
 <h3>References</h3>
 
-<p><a name="bottou-1990">[1]</a> <a href="https://papers.baulab.info/Bottou-1990.pdf"
-  >L&eacute;on Bottou and Patrick Gallinari.
-  <em>A framework for the cooperation of learning algorithms.</em></a>
-  Advances in neural information processing systems 3 (1990).
+<p><a name="wang-2022">[1]</a> <a href="https://arxiv.org/pdf/2203.04439.pdf"
+  >Dian Wang, Robin Walters, and Robert Platt.
+  <em>SO(2) Equivariant Reinforcement Learning.</em></a>
+  International Conference on Learning Representations 10 (2022) Spotlight Presentation.
+</p>
+
+<p><a name="Zhu-2022">[2]</a> <a href="https://arxiv.org/pdf/2202.09468.pdf"
+  >Xupeng Zhu, Dian Wang, Ondrej Biza, Guanang Su, Robin Walters, Robert Platt.
+  <em>Sample Efficient Grasp Learning Using Equivariant Models.</em></a>
+    Robotics: Science and Systems (RSS).
+</p>
+
+
+<p><a name="Huang-2022">[3]</a> <a href="https://arxiv.org/pdf/2202.09400.pdf"
+  >Haojie Huang, Dian Wang, Robin Walters, Robert Platt
+  <em>Equivariant Transporter Network.</em></a>
+    Robotics: Science and Systems (RSS).
+</p>
+
+<p><a name="Klee-2022">[4]</a> <a href="https://arxiv.org/pdf/2302.13926.pdf"
+  >David M. Klee, Ondrej Biza, Robert Platt, Robin Walter
+  <em>Image to Sphere: Learning Equivariant Features for Efficient Pose Prediction</em></a>
+  International Conference on Learning Representations (ICLR)
 </p>
 
 <h2>Team Members</h2>
                                                    
-<p>Make sure to list here is who is on the team.</p>
+<p>Boce Hu and Zihao Dong</p>
 
   
 </div><!--col-->
